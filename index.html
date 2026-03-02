@@ -44,7 +44,7 @@ playBtn.textContent = '▶ Resume';
 function scheduleNext() {
 if (!isPlaying) return;
 if (currentScreen >= screens.length) {
-resetDemo();
+startDemo();
 return;
 }
 showScreen(currentScreen);
