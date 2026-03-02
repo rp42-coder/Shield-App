@@ -44,7 +44,7 @@ playBtn.textContent = '▶ Resume';
 function scheduleNext() {
 if (!isPlaying) return;
 if (currentScreen >= screens.length) {
-startDemo();
+resetDemo();
 return;
 }
 showScreen(currentScreen);
@@ -94,4 +94,4 @@ console.log('Form error:', err);
 }
 });
 });
-showScreen(0);startDemo();</script></body></html>
+showScreen(0);audio.onended = function() { setTimeout(function() { startDemo(); }, 1000); };startDemo();</script></body></html>
